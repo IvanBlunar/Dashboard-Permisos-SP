@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/register.css">
+    <title>Registro de Usuario</title>
+</head>
+<body>
+    <div class="container">
+        <div class="menu-toggle" id="menuToggle">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <div class="sidebar" id="sidebar">
+            <h2>SAN PABLO</h2>
+            <nav>
+                <a href="../inicio/inicio.html">Inicio</a>
+                <a href="../dashboard.html">Permisos</a>
+                <a href="../reportes/reportes.html">Reportes</a>
+                <a href="../historial/historial_permisos.html">Historial Permisos</a>
+                <a href="../views/register.html">Registro</a>
+                <a href="#">Configuración</a>
+            </nav>
+        </div>
+        <div class="main-content">
+    <h1>Registro de Usuario</h1>
+    <form id="registerForm">
+        <label for="username">Nombre de Usuario:</label>
+        <input type="text" id="username" name="username" required>
+        <br>
+        <label for="password">Contraseña:</label>
+        <input type="password" id="password" name="password" required>
+        <br>
+        <label for="role">Rol:</label>
+        <select id="role" name="role">
+            <option value="user">Usuario</option>
+            <option value="admin">Administrador</option>
+        </select>
+        <br>
+        <button type="submit">Registrar</button>
+    </form>
+    <script src="register.js"></script>
+    <div class="main-content">
+</body>
+</html>

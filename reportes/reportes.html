@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reportes</title>
+    <link rel="stylesheet" href="../css/reportes.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="icon" href="../assets/img/logored.PNG">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="menu-toggle" id="menuToggle">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <div class="sidebar" id="sidebar">
+            <h2>SAN PABLO</h2>
+            <nav>
+                <a id="navInicio" href="../inicio/inicio.html"><i class="fas fa-home"></i> Inicio</a>
+                <a id="navPermisos" href="/dashboard.html"><i class="fas fa-user-shield"></i> Permisos</a>
+                <a id="navReportes" href="/reportes/reportes.html"><i class="fas fa-chart-bar"></i> Reportes</a>
+                <a id="navHistorial" href="/historial/historial_permisos.html"><i class="fas fa-history"></i> Historial Permisos</a>
+                <a id="navConfiguracion" href="#"><i class="fas fa-cog"></i> Configuración</a>
+                <button id="logoutButton" class="logout-button"><i class="fas fa-sign-out-alt"></i> Cerrar Sesión</button>
+                
+            </nav>
+        </div>
+        <div class="main-content">
+            <h1>Reportes de Permisos</h1>
+            <input type="text" id="filter-input" placeholder="Filtrar por...">
+            <label for="start-date">Desde:</label>
+            <input type="date" id="start-date">
+            <label for="end-date">Hasta:</label>
+            <input type="date" id="end-date">
+            <table id="report-table">
+                <thead>
+                    <tr>
+                        <th>Fecha de Solicitud</th>
+                        <th>Nombres y Apellidos</th>
+                        <th>Cédula</th>
+                        <th>Fecha del Permiso</th>
+                        <th>Hora de Salida</th>
+                        <th>Hora de Llegada</th>
+                        <th>Motivo</th>
+                        <th>Descontable</th>
+                        <th>Autorizado Por</th>
+                        <th>observaciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Las filas de la tabla se generarán dinámicamente aquí -->
+                </tbody>
+            </table>
+            <div id="pagination"></div>
+            <button id="csv-button">Descargar CSV</button>
+        </div>
+    </div>
+
+    <!-- Incluyendo el archivo script.js al final del body -->
+    <script src="../reportes/reportes.js"></script>
+    <script src="../libs/jspdf.umd.min.js"></script>
+    <script src="../libs/papaparse.js"></script>
+    <script src="/logout.js"></script>
+    <script src="../highlightNav.js"></script>
+
+
+</body>
+</html>

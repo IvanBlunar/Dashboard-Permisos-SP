@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" href="assets/img/logored.PNG">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+</head>
+<body>
+    <div class="container">
+        <div class="menu-toggle" id="menuToggle">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <div class="sidebar" id="sidebar">
+            <h2>SAN PABLO</h2>
+            <nav id="menuNav">
+                <a id="navInicio" href="inicio/inicio.html"><i class="fas fa-home"></i> Inicio</a>
+                <a id="navPermisos" href="dashboard.html"><i class="fas fa-user-shield"></i> Permisos</a>
+                <a id="navReportes" href="reportes/reportes.html"><i class="fas fa-chart-bar"></i> Reportes</a>
+                <a id="navHistorial" href="historial/historial_permisos.html"><i class="fas fa-history"></i> Historial Permisos</a>
+                <a id="navConfiguracion" href="#"><i class="fas fa-cog"></i> Configuración</a>
+                <button id="logoutButton" class="logout-button"><i class="fas fa-sign-out-alt"></i> Cerrar Sesión</button>
+                
+            </nav>
+        </div>
+        <div class="main-content">
+            <h1>Gestión de Permisos</h1>
+            <form id="permiso-form" action="#" method="post" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label for="fecha-solicitud">Fecha de Solicitud:</label>
+                    <input type="date" id="fecha-solicitud" name="fecha_solicitud" required>
+                </div>
+                <div class="form-group">
+                    <label for="nombres-apellidos">Nombres y Apellidos:</label>
+                    <input type="text" id="nombres-apellidos" name="nombres_apellidos" required>
+                </div>
+                <div class="form-group">
+                    <label for="cedula">Cédula:</label>
+                    <input type="text" id="cedula" name="cedula" required>
+                </div>
+                <div class="form-group">
+                    <label for="fecha-permiso">Fecha del permiso:</label>
+                    <input type="date" id="fecha-permiso" name="fecha_permiso" required>
+                </div>
+                <div class="form-group">
+                    <label for="hora-salida">Hora de salida:</label>
+                    <input type="time" id="hora-salida" name="hora_salida">
+                </div>
+                <div class="form-group">
+                    <label for="hora-llegada">Hora de llegada:</label>
+                    <input type="time" id="hora-llegada" name="hora_llegada">
+                </div>
+                <div class="form-group">
+                    <label for="motivo-permiso">Motivo del permiso:</label>
+                    <select id="motivo-permiso" name="motivo_permiso" required>
+                        <option value="" disabled selected>Seleccione un motivo</option>
+                        <option value="cita_medica">Cita Médica</option>
+                        <option value="licencia_luto">Licencia por luto</option>
+                        <option value="actividad_personal">Actividad personal</option>
+                        <option value="calamidad_domestica">Calamidad doméstica</option>
+                        <option value="dia_familia">Día de la familia</option>
+                        <option value="licencia_no_remunerada">Licencia no remunerada</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="descontable">Descontable:</label>
+                    <select id="descontable" name="descontable" required>
+                        <option value="no">No</option>
+                        <option value="si">Sí</option>
+                        <option value="recuperado">Recuperado</option>
+                    </select>
+                </div>
+                <div class="additional-info" id="recuperado-info">
+                    <div class="form-group">
+                        <label for="fecha-recuperacion">Fecha de recuperación:</label>
+                        <input type="date" id="fecha-recuperacion" name="fecha_recuperacion">
+                    </div>
+                    <div class="form-group">
+                        <label for="hora-recuperacion">Horario de recuperación:</label>
+                        <input type="text" id="hora-recuperacion" name="hora_recuperacion" placeholder="Ejemplo: 5pm - 7pm">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="firma">Cargar firma:</label>
+                    <input type="file" id="firma" name="firma" accept="image/*" required>
+                </div>
+                <div class="form-group">
+                    <label for="autorizado-por">Autorizado por:</label>
+                    <input type="text" id="autorizado-por" name="autorizado_por" required placeholder="Nombre del autorizador">
+                </div>
+                <div class="form-group">
+                    <label for="observaciones">Observaciones:</label>
+                    <textarea id="observaciones" name="observaciones" rows="4" placeholder="Escribe tus observaciones aquí..."></textarea>
+                </div>
+                <div class="form-group">
+                    <button type="button" id="export-btn">Exportar a PDF</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+    <script src="libs/jspdf.umd.min.js"></script>
+    <script src="highlightNav.js"></script>
+    <script src="/logout.js"></script>

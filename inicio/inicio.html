@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="../css/styles.css"> <!-- Estilos generales -->
+    <link rel="stylesheet" href="../css/inicio.css"> <!-- Estilos específicos de inicio -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+
+    <link rel="icon" href="../assets/img/logored.PNG"> <!-- Icono -->
+</head>
+<body>
+    
+    <div class="container">
+        <div class="menu-toggle" id="menuToggle">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <div class="sidebar" id="sidebar">
+            <h2>SAN PABLO</h2>
+            <nav>
+                <a id="navInicio" href="/inicio/inicio.html"><i class="fas fa-home"></i> Inicio</a>
+                <a id="navPermisos" href="/dashboard.html"><i class="fas fa-user-shield"></i> Permisos</a>
+                <a id="navReportes" href="/reportes/reportes.html"><i class="fas fa-chart-bar"></i> Reportes</a>
+                <a id="navHistorial" href="/historial/historial_permisos.html"><i class="fas fa-history"></i> Historial Permisos</a>
+                <a id="navConfiguracion" href="#"><i class="fas fa-cog"></i> Configuración</a>
+                <button id="logoutButton" class="logout-button"><i class="fas fa-sign-out-alt"></i> Cerrar Sesión</button>
+                
+            </nav>
+        </div>
+        <div class="main-content">
+            
+            <h1>Dashboard</h1>
+            <div class="widgets-container">
+                <div id="widgets-container">
+                    <!-- Los widgets se generarán dinámicamente aquí -->
+                </div>
+            </div>
+
+            <div class="chart-container">
+                <canvas id="myChart" width="800" height="400"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- Chart.js desde CDN -->
+    <script src="../inicio/inicio.js"></script> <!-- Tu archivo JavaScript personalizado -->
+    <script src="/logout.js"></script>
+    <script src="../highlightNav.js"></script>
+
+    
+</body>
+</html>

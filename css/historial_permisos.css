@@ -1,0 +1,94 @@
+/* Estilos específicos para la página de Historial de Permisos */
+
+/* Estilo para el contenedor principal */
+.container {
+    justify-content: flex-start; /* Ajusta el contenido principal al inicio */
+}
+
+/* Estilo para la lista de permisos */
+.permisos-list {
+    margin-top: 20px;
+}
+
+.permiso-item {
+    margin-bottom: 10px;
+}
+
+.permiso-item a {
+    display: block;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    text-decoration: none;
+    color: #333;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.permiso-item a:hover {
+    background-color: #f1f1f1;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.paginaction{
+    background-color: antiquewhite;
+}
+
+/* Estilos para los botones de paginación */
+.pagination button {
+    background-color: #f1f1f1;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 2px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.pagination button:hover {
+    background-color: #ddd;
+}
+
+.pagination button.active {
+    background-color: #007bff;
+    color: #fff;
+    border-color: #007bff;
+}
+
+.pagination button:disabled {
+    background-color: #e9ecef;
+    cursor: not-allowed;
+}
+
+#filter-input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 80px;
+    border: 1px solid #ebe7e7;
+    border-radius: 20px !important;
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
+    background-color: #f0ebeb;
+}
+
+.logout-button {
+    background-color: #f44336; /* Rojo */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+    width: 100%;
+    text-align: center;
+}
+
+.logout-button:hover {
+    background-color: #a02727; /* Rojo más oscuro al hacer hover */
+}
+
+nav a i {
+    margin-right: 5px;
+}
+

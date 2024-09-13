@@ -1,0 +1,176 @@
+/* Estilos generales para la tabla */
+
+.main-content {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+    /* Hacer scroll en el contenido si es necesario */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 16px;
+    text-align: left;
+}
+
+th,
+td {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+}
+
+th {
+    background-color: #f4f4f4;
+    color: #003366;
+    /* Color de texto coherente con h1 del primer CSS */
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Estilos para el campo de filtro y fechas */
+#filter-input,
+#start-date,
+#end-date {
+    width: 100%;
+    padding: 12px;
+    /* Igualar padding con los inputs del primer CSS */
+    margin-bottom: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    /* Igualar border-radius con los inputs del primer CSS */
+    box-sizing: border-box;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    background-color: #f0ebeb;
+    border-radius: 20px !important;
+}
+
+#filter-input:focus,
+#start-date:focus,
+#end-date:focus {
+    border-color: #df0021;
+    box-shadow: 0 0 5px rgba(223, 0, 33, 0.3);
+    outline: none;
+}
+
+/* Estilos para el botón CSV */
+button,
+.page-btn {
+    padding: 12px 24px;
+    /* Igualar padding con el botón del primer CSS */
+    font-size: 16px;
+    color: #fff;
+    background-color: #df0021;
+    /* Igualar color con el botón del primer CSS */
+    border: none;
+    border-radius: 25px;
+    /* Igualar border-radius con el botón del primer CSS */
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+button:hover,
+.page-btn:hover {
+    background-color: #a10202;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Espaciado entre etiquetas y campos de entrada */
+label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+    color: #333;
+    /* Coherente con el color de las etiquetas del primer CSS */
+}
+
+
+
+/* Media Queries para pantallas más pequeñas */
+@media (max-width: 768px) {
+
+    /* Ajustar el tamaño de fuente y el padding de la tabla para pantallas más pequeñas */
+    table {
+        font-size: 14px;
+    }
+
+    th,
+    td {
+        padding: 8px 10px;
+    }
+
+    /* Ajustar el tamaño de los campos de entrada */
+    #filter-input,
+    #start-date,
+    #end-date {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    /* Ajustar el tamaño de los botones */
+    button,
+    .page-btn {
+        font-size: 14px;
+        padding: 8px 12px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    /* Ajustar el diseño para dispositivos móviles muy pequeños */
+    table {
+        font-size: 12px;
+    }
+
+    th,
+    td {
+        padding: 6px 8px;
+    }
+
+    /* Ocultar algunas columnas en dispositivos móviles si es necesario */
+    th:nth-child(4),
+    td:nth-child(4),
+    /* Ejemplo: Ocultar la columna de Fecha del Permiso */
+    th:nth-child(6),
+    td:nth-child(6)
+
+    /* Ejemplo: Ocultar la columna de Hora de Llegada */
+        {
+        display: none;
+    }
+}
+
+.page-btn {
+    margin: 0 2px;
+    padding: 5px 10px;
+    border: 1px solid #ddd;
+    /* Igualar color de borde con los bordes de los inputs */
+    border-radius: 4px;
+    /* Igualar border-radius con los inputs */
+    cursor: pointer;
+    background-color: #df0021;
+    /* Color de fondo coherente con el color del texto de h1 */
+    color: #fff;
+    /* Color de texto blanco como el del primer CSS */
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.page-btn:hover {
+    background-color: #f1f1f1;
+    /* Color de fondo en hover similar al de las filas de la tabla */
+    color: #333;
+    /* Color de texto oscuro para contraste */
+}
+
+nav a i {
+    margin-right: 5px;
+}

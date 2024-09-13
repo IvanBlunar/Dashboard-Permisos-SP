@@ -1,0 +1,105 @@
+/* Estilos generales del dashboard */
+.main-content {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto; /* Hacer scroll en el contenido si es necesario */
+}
+
+
+.chart-container {
+    width: 100%;
+    max-width: 800px; /* Ancho máximo del gráfico */
+    margin: 20px auto; /* Centrar el gráfico en la página */
+}
+
+canvas {
+    background-color: #fff; /* Color de fondo del gráfico */
+    border-radius: 8px; /* Bordes redondeados */
+}
+
+/* Estilos específicos para los widgets de motivos */
+.widgets-container {
+    margin-bottom: 40px; /* Espacio debajo de los widgets */
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+p{
+    font-size: 30px;
+}
+
+#widgets-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas de igual tamaño */
+    gap: 20px; /* Espacio entre los widgets */
+}
+
+.widget {
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    min-height: 150px; /* Altura mínima para mantener consistencia */
+    color: #333; /* Color del texto */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animaciones de transición */
+}
+
+/* Colores específicos para cada widget */
+.widget:nth-child(1) {
+    background: rgba(255, 0, 0, 0.2); /* Rojo con 20% de opacidad */
+}
+
+.widget:nth-child(2) {
+    background: rgba(255, 69, 0, 0.2); /* Rojo anaranjado con 20% de opacidad */
+}
+
+.widget:nth-child(3) {
+    background: rgba(255, 105, 180, 0.2); /* Rojo rosa con 20% de opacidad */
+}
+
+.widget:nth-child(4) {
+    background: rgba(255, 20, 147, 0.2); /* Rojo profundo con 20% de opacidad */
+}
+
+.widget:nth-child(5) {
+    background: rgba(255, 99, 71, 0.2); /* Tomate con 20% de opacidad */
+}
+
+.widget:nth-child(6) {
+    background: rgba(220, 20, 60, 0.2); /* Rojo fuego con 20% de opacidad */
+}
+
+/* Efecto hover */
+.widget:hover {
+    transform: scale(1.05); /* Aumentar el tamaño del widget ligeramente */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Sombra más intensa */
+}
+
+
+.sidebar nav {
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+}
+
+.sidebar nav a,
+.sidebar nav button.logout-button {
+    text-decoration: none;
+    display: block;
+}
+
+
+/* Media query para pantallas pequeñas */
+@media screen and (max-width: 768px) {
+    .sidebar {
+        transform: translateX(0); /* Mostrar la barra lateral en pantallas pequeñas */
+    }
+
+    #widgets-container {
+        grid-template-columns: 1fr; /* Una columna en pantallas pequeñas */
+    }
+}
+

@@ -1,0 +1,311 @@
+/* Estilos generales para el cuerpo */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+
+/* Contenedor principal */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    height: 100vh;
+
+}
+
+/* Estilos para la barra lateral (sidebar) */
+.sidebar {
+    width: 250px;
+    background-color: #df0021;
+    color: #fff;
+    padding: 20px;
+    overflow-y: auto;
+    flex-shrink: 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar h2 {
+    margin-top: 0;
+    font-size: 1.5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+/* Enlaces en la barra lateral */
+.sidebar a {
+    color: #fff;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s, padding-left 0.3s;
+    margin-bottom: 10px;
+}
+
+.sidebar a:hover {
+    background-color: #a10202;
+    padding-left: 20px;
+    /* Efecto de deslizamiento al pasar el ratón */
+}
+
+/* Estilos para el contenido principal */
+.main-content {
+    flex: 1;
+    padding: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    /* Centra el contenido */
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 50px;
+    color: #003366;
+}
+
+/* Estilos para los formularios */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #333;
+
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea,
+#filter-input,
+#start-date,
+#end-date {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 16px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus,
+#filter-input:focus,
+#start-date:focus,
+#end-date:focus {
+    border-color: #df0021;
+    box-shadow: 0 0 5px rgba(223, 0, 33, 0.3);
+    outline: none;
+}
+
+.form-group button {
+    background-color: #df0021;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    cursor: pointer;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.form-group button:hover {
+    background-color: #a10202;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.error-message {
+    color: red;
+    font-size: 0.9em;
+    margin-top: 5px;
+}
+
+.additional-info {
+    display: none;
+    margin-top: 10px;
+}
+
+/* Estilos generales para la tabla */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 16px;
+    text-align: left;
+}
+
+th,
+td {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+}
+
+th {
+    background-color: #f4f4f4;
+    color: #003366;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tr:hover {
+    background-color: #f1f1f1;
+}
+
+.logout-button {
+    background-color: #f44336;
+    /* Rojo */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+    width: 100%;
+    text-align: center;
+}
+
+.logout-button:hover {
+    background-color: #a02727;
+    /* Rojo más oscuro al hacer hover */
+}
+
+nav a.active {
+    font-weight: bold;
+    background-color: #963b3b;
+    /* Ajusta el color según tu diseño */
+}
+
+
+/* Media Queries para pantallas más pequeñas */
+@media (max-width: 768px) {
+    .container {
+        height: auto;
+        /* Permite que el contenedor ajuste la altura en dispositivos más pequeños */
+    }
+
+
+    .sidebar {
+        width: 100%;
+        padding: 10px;
+        height: auto;
+        /* Ajusta la altura en dispositivos más pequeños */
+        position: fixed;
+        z-index: 1;
+
+
+
+    }
+
+    .hide-links a {
+        display: none;
+
+    }
+
+
+    .menu-toggle {
+        position: fixed;
+        top: 18px;
+        left: 20px;
+        width: 30px;
+        height: 21px;
+        cursor: pointer;
+        z-index: 1000;
+        /* Asegura que esté por encima de otros elementos */
+    }
+
+    .bar {
+        display: block;
+        width: 30px;
+        height: 3px;
+        background-color: #fff;
+        margin: 5px 0;
+        transition: 0.3s;
+    }
+
+
+
+    .sidebar a {
+        padding: 10px;
+        font-size: 17px;
+    }
+
+    .main-content {
+        padding: 20px;
+        margin-top: 70px;
+    }
+
+    table {
+        font-size: 14px;
+    }
+
+    th,
+    td {
+        padding: 8px 10px;
+    }
+
+    #filter-input,
+    #start-date,
+    #end-date {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    button,
+    .page-btn {
+        font-size: 14px;
+        padding: 8px 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .sidebar a {
+        padding: 8px;
+        font-size: 17px;
+    }
+
+    table {
+        font-size: 12px;
+    }
+
+    th,
+    td {
+        padding: 6px 8px;
+    }
+
+    /* Ocultar algunas columnas en dispositivos móviles si es necesario */
+    th:nth-child(4),
+    td:nth-child(4),
+    /* Ejemplo: Ocultar la columna de Fecha del Permiso */
+    th:nth-child(6),
+    td:nth-child(6)
+
+    /* Ejemplo: Ocultar la columna de Hora de Llegada */
+        {
+        display: none;
+    }
+}
+
+input.error,
+select.error,
+textarea.error {
+    border-color: red;
+}
