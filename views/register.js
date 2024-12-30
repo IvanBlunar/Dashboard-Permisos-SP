@@ -18,3 +18,17 @@ document.getElementById('registerForm').addEventListener('submit', function(even
     })
     .catch(error => console.error('Error:', error));
 });
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const menuToggle = document.getElementById('menuToggle');
+    const sidebar = document.getElementById('sidebar');
+
+    // Inicialmente oculta los enlaces
+    sidebar.classList.add('hide-links');
+
+    menuToggle.addEventListener('click', function() {
+        // Alterna la clase `hide-links` en la barra lateral
+        sidebar.classList.toggle('hide-links');
+    });
+});
