@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="../css/register.css">
     <title>Registro de Usuario</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
     <div class="container">
@@ -17,12 +18,13 @@
         <div class="sidebar" id="sidebar">
             <h2>SAN PABLO</h2>
             <nav>
-                <a href="../inicio/inicio.html">Inicio</a>
-                <a href="../dashboard.html">Permisos</a>
-                <a href="../reportes/reportes.html">Reportes</a>
-                <a href="../historial/historial_permisos.html">Historial Permisos</a>
-                <a href="../views/register.html">Registro</a>
-                <a href="#">Configuración</a>
+                <a id="navInicio" href="../inicio/inicio.html"><i class="fas fa-home"></i> Inicio</a>
+                <a id="navPermisos" href="/dashboard.html"><i class="fas fa-user-shield"></i> Permisos</a>
+                <a id="navReportes" href="/reportes/reportes.html"><i class="fas fa-chart-bar"></i> Reportes</a>
+                <a id="navHistorial" href="/historial/historial_permisos.html"><i class="fas fa-history"></i> Historial Permisos</a>
+                <a id="navRegister" href="../views/register.html"><i class="fas fa-user-plus"></i> Registro</a>
+                <a id="navConfiguracion" href="#"><i class="fas fa-cog"></i> Configuración</a>
+                <button id="logoutButton" class="logout-button"><i class="fas fa-sign-out-alt"></i> Cerrar Sesión</button>
             </nav>
         </div>
         <div class="main-content">
