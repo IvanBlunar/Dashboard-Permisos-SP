@@ -17,7 +17,7 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
             // Almacena el token en el almacenamiento local
             localStorage.setItem('token', result.token);
             // Redirige a la página de inicio
-            window.location.href = 'http://127.0.0.1:5500/inicio/inicio.html';
+            window.location.href = '/inicio/inicio.html';
         } else {
             alert(result.message); // Muestra un mensaje de error desde el servidor
         }
